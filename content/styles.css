@@ -9,6 +9,12 @@ body>header>a>img, body>header a  {
     padding: 0px 5px;
     font-size: 1.2em;
 }
+#post-content-textarea{
+    width:600px;
+}
+#post-title{
+    width: 400px;
+}
 
 body>footer {
     background: #eee;

@@ -4,10 +4,10 @@
 
 <form method="post">
     <div>Title:</div>
-    <input type="text" name="post_title" value="<?=
+    <input type="text" id="post-title" name="post_title" value="<?=
 htmlspecialchars($this->post['title'])?>">
     <div>Content:</div>
-    <textarea rows="10" name="post_content"><?=
+    <textarea rows="20" id="post-content-textarea" name="post_content"><?=
 htmlspecialchars($this->post['content'])?></textarea>
     <div>Date (yyyy-MM-dd hh:mm:ss):</div>
     <input type="text" name="post_date" value="<?=

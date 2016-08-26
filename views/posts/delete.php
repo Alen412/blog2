@@ -2,10 +2,10 @@
 <h1>Are you sure you want to delete this post?</h1>
 
 <form method="post">
-    <div>Title:</div><input type="text" value="<?=
+    <div>Title:</div><input type="text" id="post-title" value="<?=
     htmlspecialchars($this->post['title'])?>" disabled>
     <div>Content:</div>
-    <textarea rows="10" disabled><?=
+    <textarea rows="10" id="post-content-textarea" disabled><?=
         htmlspecialchars($this->post['content'])?></textarea>
     <div>Date:</div>
     <input type="text" value="<?=
