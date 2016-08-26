@@ -12,9 +12,9 @@ htmlspecialchars($this->post['title'])?>">
 htmlspecialchars($this->post['content'])?></textarea>
     
     <div>Date (yyyy-MM-dd hh:mm:ss):</div>
-    <input type="text" name="post_date"  value="<?=
+    <input type="text"  name="post_date"  value="<?=
 htmlspecialchars($this->post['date'])?>">
-    
+
     <div>Author ID:</div>
     <input type="text" name="user_id" value="<?=
 htmlspecialchars($this->post['user_id'])?>">
