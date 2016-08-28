@@ -1,6 +1,6 @@
 <?php $this->title="Create new post"; ?>
 <h1><?=htmlspecialchars($this->title)?></h1>
-
+<div id="floating-left">
 <form method="post">
     <div>Title:</div>
     <input type="text" name="post_title">
@@ -9,3 +9,4 @@
     <div><input type="submit" value="Create">
     <a href="<?=APP_ROOT?>/posts">[Cancel]</a></div>
 </form>
+</div>

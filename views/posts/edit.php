@@ -2,6 +2,7 @@
 
 <h1><?=htmlspecialchars($this->title)?></h1>
 
+<div id="floating-left">
 <form method="post">
     <div>Title:</div>
     <input type="text" name="post_title" value="<?=
@@ -19,3 +20,4 @@ htmlspecialchars($this->post['user_id'])?>">
     <a href="<?=APP_ROOT?>/posts">[Cancel]</a></div>
 
 </form>
+    </div>

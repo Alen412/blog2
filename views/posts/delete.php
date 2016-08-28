@@ -1,6 +1,7 @@
 <?php $this->title = 'Delete Post'; ?>
 <h1>Are you sure you want to delete this post?</h1>
 
+<div id="floating-left">
 <form method="post">
     <div>Title:</div><input type="text" value="<?=
     htmlspecialchars($this->post['title'])?>" disabled>
@@ -17,3 +18,4 @@
     <a href="<?=APP_ROOT?>/posts">[Cancel]</a></div>
 
 </form>
+    </div>

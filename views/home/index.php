@@ -15,7 +15,7 @@
         <?php foreach ($this->posts as $post):?>
         <h2 class="title"><?=htmlentities($post['title'])?></h2>
         <div class="date"><i>Posted on</i><?=(new DateTime($post['date']))->format('d-M-y')?>
-        <i>by</i> <?=htmlentities($post['full_name'])?></div>
+        <i>by </i><strong><?=htmlentities($post['full_name'])?></strong></div>
 
         <p class="content"><?=$post['content']?></p>
         <?php endforeach;?>

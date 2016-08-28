@@ -1,4 +1,5 @@
 <?php $this->title= 'Users'; ?>
+<div id="floating-left">
 <h1><?=htmlspecialchars($this->title)?></h1>
 
 <table>
@@ -16,3 +17,4 @@
     </tr>
     <?php endforeach; ?>
 </table>
+    </div>

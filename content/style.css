@@ -95,3 +95,6 @@ input[type="submit"]:active {
     left:20px;
     right:10px;
 }
+#floating-left {
+    padding:20px;
+}
