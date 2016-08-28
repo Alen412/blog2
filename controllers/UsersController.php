@@ -9,8 +9,6 @@ class UsersController extends BaseController
     public function register()
     {
 		if($this->isPost){
-
-
             $username=$_POST['username'];
             if(strlen($username)<2||strlen($username)>50){
                 $this->setValidationError("username", "Invalid username!");

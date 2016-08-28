@@ -10,6 +10,5 @@ class HomeController extends BaseController
 	
 	function view($id) {
         $this->post=$this->model->getPostById($id);
-      
     }
 }
