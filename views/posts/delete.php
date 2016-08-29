@@ -3,10 +3,10 @@
 
 <div id="floating-left">
 <form method="post">
-    <div>Title:</div><input type="text" value="<?=
+    <div>Title:</div><input type="text" id="post-title" value="<?=
     htmlspecialchars($this->post['title'])?>" disabled>
     <div>Content:</div>
-    <textarea rows="10" disabled><?=
+    <textarea id='post-content' rows="10" disabled><?=
         htmlspecialchars($this->post['content'])?></textarea>
     <div>Date:</div>
     <input type="text" value="<?=

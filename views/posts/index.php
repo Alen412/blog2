@@ -14,7 +14,7 @@
     <tr>
         <td><?=$post['id']?></td>
         <td><?=htmlspecialchars($post['title'])?></td>
-        <td><?=cutLongText($post['content'])?></td>
+        <td><?=$post['content']?></td>
         <td><?=htmlspecialchars($post['date'])?></td>
         <td><?=$post['user_id']?></td>
         <td><a href="<?=APP_ROOT?>/posts/edit/<?=$post['id']?>">[Edit]</a>

@@ -17,11 +17,19 @@ body>footer {
     text-align: center;
 }
 
-table th, table td {
+table th, table td{
     background: #DDD;
-    padding: 5px;
+    padding: 8px;
+    border: 1px solid firebrick;
 }
 
+#post-content{
+    width:600px;
+}
+
+#post-title{
+    width:300px;
+}
 ul#messages li {
     display: block;
     width: 80%;
