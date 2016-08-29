@@ -24,6 +24,7 @@
 			<li class="active"><a href="<?=APP_ROOT?>/">Home</a></li>
 			<?php if ($this->isLoggedIn) : ?>
             <li><a href="<?=APP_ROOT?>/posts">Posts</a></li>
+                <li><a href="<?=APP_ROOT?>/posts/category">Posts by Category</a></li>
             <li><a href="<?=APP_ROOT?>/posts/create">Create Post</a></li>
 			<li><a href="<?=APP_ROOT?>/users">Users</a></li>
 			<?php else: ?>

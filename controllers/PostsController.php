@@ -13,7 +13,10 @@ class PostsController extends BaseController
        $this->authorize();
     }
     public  function index(){
-    $this->posts=$this->model->getAll();
+        $this->posts=$this->model->getAll();
+    }
+    public function category(){
+        $this->posts=$this->model->getAll();
     }
     public function create(){
         if($this->isPost){

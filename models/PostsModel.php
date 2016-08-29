@@ -23,6 +23,15 @@ class PostsModel extends BaseModel
         $result=$statement->get_result()->fetch_assoc();
         return $result;
     }
+    public function getByCategory()
+    {
+        $statement=self::$db->prepare(
+            "Select * from posts where category = ?");
+        $statement->bind_param("s", $category);
+        $statement->execute();
+        $result=$statement->get_result()->fetch_assoc();
+        return $result;
+    }
     public function create(string $title, string $content, int $user_id, string $category):bool
     {
         $statement=self::$db->prepare(
