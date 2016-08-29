@@ -25,9 +25,12 @@ class PostsController extends BaseController
             if(strlen($content)<1){
                 $this->setValidationError("post_content", "Content cannot be empty");
             }
-            if($this->formValid()){
+            if(isset($_POST['category']) ) {
+                $category = $_POST['category'];
+            }
+                if($this->formValid()){
                 $userId=$_SESSION['user_id'];
-                if($this->model->create($title, $content, $userId)){
+                if($this->model->create($title, $content, $userId, $category)){
                     $this->addInfoMessage("Post Created!");
                     $this->redirect("posts");
                 }
@@ -44,24 +47,22 @@ class PostsController extends BaseController
             if(strlen($title)<1){
                 $this->setValidationError("post_title","Title cannot be empty!");
             }
+            if(isset($_POST['category']) ) {
+                $category = $_POST['category'];
+            }
             $content=$_POST['post_content'];
             if(strlen($content)<1){
                 $this->setValidationError("post_content", "Content cannot be empty!");
             }
 
             $date=$_POST['post_date'];
-            $dateRegex="/^\d{2,4}-\d{1,2}( \d{1,2}:\d{1,2}(:\d{1,2})?)?$/";
-            //if(!preg_match($dateRegex, $date)){
-             //  $this->setValidationError("post_date", "Invalid date!");
-
-          //  }
             $user_id=$_POST['user_id'];
             if($user_id<=0 || $user_id>1000000){
                 $this->setValidationError("user_id", "Invalid author user ID");
             }
 
             if($this->formValid()){
-                if($this->model->edit ($id, $title, $content, $date, $user_id)){
+                if($this->model->edit ($id, $title, $category, $content, $date, $user_id)){
                     $this->addInfoMessage("Post edited.");
                 }
                 else{

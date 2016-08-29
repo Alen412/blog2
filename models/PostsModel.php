@@ -23,21 +23,21 @@ class PostsModel extends BaseModel
         $result=$statement->get_result()->fetch_assoc();
         return $result;
     }
-    public function create(string $title, string $content, int $user_id):bool
+    public function create(string $title, string $content, int $user_id, string $category):bool
     {
         $statement=self::$db->prepare(
-            "Insert into posts(title, content, user_id) values(?,?,?)");
-        $statement->bind_param("ssi",$title, $content, $user_id);
+            "Insert into posts(title, content, user_id, category) values(?,?,?,?)");
+        $statement->bind_param("ssis",$title, $content, $user_id, $category);
         $statement->execute();
         return $statement->affected_rows==1;
     }
 
-    public function edit(string $id, string $title, string $content, string $date, int $user_id):bool
+    public function edit(string $id, string $title, string $category, string $content, string $date, int $user_id):bool
     {
         $statement=self::$db->prepare(
-            "Update posts set title=?, ".
+            "Update posts set title=?, category=?, ".
         "content = ?, date=?, user_id=? where id=?");
-        $statement->bind_param("sssii",$title, $content, $date, $user_id, $id);
+        $statement->bind_param("ssssii",$title,$category, $content, $date, $user_id, $id);
         $statement->execute();
         return $statement->affected_rows>=0;
     }

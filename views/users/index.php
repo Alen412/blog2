@@ -6,8 +6,8 @@
     <tr>
         <th>ID</th>
         <th>Username</th>
-        <th>Full Name
-        </th>
+        <th>Full Name</th>
+  
     </tr>
     <?php foreach ($this->users as $user):?>
     <tr>

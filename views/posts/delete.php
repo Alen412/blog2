@@ -5,6 +5,9 @@
 <form method="post">
     <div>Title:</div><input type="text" id="post-title" value="<?=
     htmlspecialchars($this->post['title'])?>" disabled>
+    <div>Category:</div>
+    <input type="text" id="post-category" value="<?=
+    htmlspecialchars($this->post['category'])?>" disabled>
     <div>Content:</div>
     <textarea id='post-content' rows="10" disabled><?=
         htmlspecialchars($this->post['content'])?></textarea>

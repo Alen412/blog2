@@ -7,6 +7,13 @@
     <div>Title:</div>
     <input type="text" id="post-title" name="post_title" value="<?=
 htmlspecialchars($this->post['title'])?>">
+    <div>Category</div>
+    <select name="category">
+        <option value="Computer science">Computer Science</option>
+        <option value="Innovations">Innovations</option>
+        <option value="Animals">Animals</option>
+        <option value="Cars">Cars</option>
+    </select>
     <div>Content:</div>
     <textarea id='post-content' rows="10" name="post_content"><?=
 htmlspecialchars($this->post['content'])?></textarea>
